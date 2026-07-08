@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSense - Privacy Policy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00c950;
+            --primary-dark: #00a843;
+            --primary-light: rgba(0, 201, 80, 0.08);
+            --primary-border: rgba(0, 201, 80, 0.15);
+            --accent: #208AEF;
+            --bg: #fafafa;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.01);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #09090b;
+                --card-bg: #18181b;
+                --text: #f8fafc;
+                --text-secondary: #94a3b8;
+                --border: #27272a;
+                --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 4rem;
+        }
+
+        /* Navigation Header */
+        header.nav-header {
+            height: 80px;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-back-home {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .btn-back-home:hover {
+            color: var(--primary);
+        }
+
+        /* Privacy Policy Container */
+        .policy-header {
+            padding: 4rem 1.5rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .shield-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 24px;
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary-border);
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            box-shadow: 0 8px 16px -4px rgba(0, 201, 80, 0.1);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .intro-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .pillar-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .pillar-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .pillar-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .pillar-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .blue-icon { background-color: rgba(59, 130, 246, 0.08); color: #3b82f6; }
+        .purple-icon { background-color: rgba(139, 92, 246, 0.08); color: #8b5cf6; }
+        .teal-icon { background-color: rgba(20, 184, 166, 0.08); color: #14b8a6; }
+        .green-icon { background-color: rgba(0, 201, 80, 0.08); color: var(--primary); }
+        .amber-icon { background-color: rgba(245, 158, 11, 0.08); color: #f59e0b; }
+        .red-icon { background-color: rgba(239, 68, 68, 0.08); color: #ef4444; }
+
+        .legal-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.015em;
+        }
+
+        .legal-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img class="logo-img" src="assets/logo.png" alt="SpendSense Logo" onerror="this.src='assets/icon.png'; this.onerror=function(){this.src='https://placehold.co/100x100/00c950/ffffff?text=SS'}">
+                <span class="logo-text">SpendSense</span>
+            </a>
+            <a href="index.html" class="btn-back-home">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <header class="policy-header">
+        <div class="shield-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h1>SpendSense Privacy Policy</h1>
+        <p class="subtitle">Effective Date: June 27, 2026. Your privacy is under your absolute control.</p>
+    </header>
+
+    <main>
+        <section class="intro-card">
+            <p class="intro-text">
+                SpendSense is built with a privacy-first architecture. All your shopping lists, item details, monthly budgets, and spending metrics are stored locally on your device. We do not operate external databases, run analytics servers, or track your behavior.
+            </p>
+        </section>
+
+        <section class="pillars-grid">
+            <!-- 100% Local Storage -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper blue-icon">
+                    <i class="fa-solid fa-hdd"></i>
+                </div>
+                <h3 class="pillar-title">100% Local Storage</h3>
+                <p class="pillar-text">
+                    All scanned grocery items, category structures, receipt logs, and monthly spending profiles are saved completely inside your device's isolated application storage. No external hosting holds your data.
+                </p>
+            </div>
+
+            <!-- Gemini Chat Safety -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper purple-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3 class="pillar-title">Gemini Chat AI Safety</h3>
+                <p class="pillar-text">
+                    Conversations with the AI budget assistant are kept offline on your device. Chat payloads are sent securely to Google Gemini APIs only when submitting queries and are never logged or stored by us.
+                </p>
+            </div>
+
+            <!-- Receipt Scanner -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper teal-icon">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <h3 class="pillar-title">On-Device Receipt Scanning</h3>
+                <p class="pillar-text">
+                    Invoice text reading is processed on-device. The text matches are temporarily formatted via Google Gemini APIs to populate your lists. Captured receipt images are deleted immediately after scanning.
+                </p>
+            </div>
+
+            <!-- Data Backup -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper green-icon">
+                    <i class="fa-solid fa-file-export"></i>
+                </div>
+                <h3 class="pillar-title">Data Backup & Ownership</h3>
+                <p class="pillar-text">
+                    You maintain complete ownership of your historical metrics. You can export a JSON backup file to your own storage at any time and import it to restore your profile on a new device.
+                </p>
+            </div>
+
+            <!-- API Keys -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper amber-icon">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3 class="pillar-title">Secure Local API Keys</h3>
+                <p class="pillar-text">
+                    Your personal Google Gemini API Key is stored inside encrypted local AsyncStorage. It is used solely for querying Gemini services straight from your device and is never uploaded.
+                </p>
+            </div>
+
+            <!-- Complete Reset -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper red-icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <h3 class="pillar-title">Complete Reset Control</h3>
+                <p class="pillar-text">
+                    You have the right to be forgotten. You can completely erase all scanned receipts, budget history, custom categories, location tags, and AI insights from your device instantly at any time.
+                </p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2>Information Collection & Use</h2>
+            <p>
+                We do not collect any Personally Identifiable Information (PII) or financial details. We request permissions on your device solely for local capabilities:
+            </p>
+            <ul>
+                <li><strong>Camera:</strong> Used to capture receipts for instant receipt text reading.</li>
+                <li><strong>Location:</strong> Used locally to detect country and city contexts for location-relevant grocery tips.</li>
+            </ul>
+
+            <h2>Third-Party Services</h2>
+            <p>
+                To provide advanced assistant features and display advertisement support, the app integrates the following third-party libraries:
+            </p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Integrated for ad banner display. Google AdMob may collect device identifiers and location data for ad delivery.</li>
+                <li><strong>Google Gemini API:</strong> Integrated to format parsed invoices and power the offline AI budget assistant. Google Gemini handles query data according to their AI safety frameworks.</li>
+            </ul>
+
+            <h2>Children's Privacy</h2>
+            <p>
+                SpendSense does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children.
+            </p>
+
+            <h2>Changes to This Policy</h2>
+            <p>
+                We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.
+            </p>
+
+            <h2>Contact Us</h2>
+            <p>
+                If you have any questions or suggestions regarding our Privacy Policy, please feel free to reach out via our GitHub repository issues or contact us.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpendSense. Designed & Developed by Naeem Liaqat.</p>
+    </footer>
+
+</body>
+</html>
