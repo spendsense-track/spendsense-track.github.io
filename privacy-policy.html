@@ -352,70 +352,84 @@
                 </p>
             </div>
 
-            <!-- API Keys -->
+            <!-- Coin Economy & Transparency -->
             <div class="pillar-card">
                 <div class="pillar-icon-wrapper amber-icon">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-coins"></i>
                 </div>
-                <h3 class="pillar-title">Secure Local API Keys</h3>
+                <h3 class="pillar-title">Coin Economy & Anti-Fraud Policy</h3>
                 <p class="pillar-text">
-                    Your personal Google Gemini API Key is stored inside encrypted local AsyncStorage. It is used solely for querying Gemini services straight from your device and is never uploaded.
+                    SpendSense uses a transparent Coin Economy for premium AI services. Manual entry is 100% free and ad-free. Coins are deducted ONLY upon successful feature execution (5 🪙 per AI Scan/Voice/Chat/CSV export, 100 🪙 per Cloud Backup). Rewarded ads are strictly limited to 10 per day with a 15-second cooldown.
                 </p>
             </div>
 
-            <!-- Complete Reset -->
+            <!-- Firebase Authentication & Hybrid Sync -->
             <div class="pillar-card">
-                <div class="pillar-icon-wrapper red-icon">
-                    <i class="fa-solid fa-trash-can"></i>
+                <div class="pillar-icon-wrapper blue-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
-                <h3 class="pillar-title">Complete Reset Control</h3>
+                <h3 class="pillar-title">Firebase Auth & Cloud Sync</h3>
                 <p class="pillar-text">
-                    You have the right to be forgotten. You can completely erase all scanned receipts, budget history, custom categories, location tags, and AI insights from your device instantly at any time.
+                    Guest data remains 100% local on device. Registered users can optionally authenticate via Google / Firebase Sign-In for cloud backup sync. Account data is transmitted via encrypted HTTPS directly to Firebase Firestore.
                 </p>
             </div>
         </section>
 
         <section class="legal-section">
-            <h2>Information Collection & Use</h2>
+            <h2>Coin Economy & Monetization Rules</h2>
             <p>
-                We do not collect any Personally Identifiable Information (PII) or financial details as a core service. We request permissions on your device solely for local capabilities and user control:
+                To provide a fair, transparent, and Google Play & AdMob compliant experience, SpendSense operates under strict monetization policies:
             </p>
             <ul>
-                <li><strong>Camera:</strong> Used to capture receipts for instant receipt text reading.</li>
-                <li><strong>Location:</strong> Used locally to detect country and city contexts for location-relevant grocery tips. This is foreground-only and never used in the background.</li>
-                <li><strong>Microphone:</strong> Used only if you choose to record voice notes for AI-assisted entry. Audio is processed temporarily and is not stored by us.</li>
-                <li><strong>Notifications & Reminders:</strong> Used to schedule local daily spending reminders and bill payment alerts natively on your device via Android AlarmManager/WorkManager. No remote push servers are used, and no notification data leaves your device.</li>
-                <li><strong>Photos / Media:</strong> Used only if you choose to save a scanned receipt image to your device gallery.</li>
-                <li><strong>Advertising IDs / Device Identifiers:</strong> Used by Google AdMob for ad delivery and measurement. This is handled by the third-party ad SDK.</li>
+                <li><strong>100% Ad-Free Manual Entry:</strong> Creating, editing, and saving expense items manually is 100% free and never triggers interstitial ads, rewarded ads, or coin charges.</li>
+                <li><strong>Success-Only Coin Deductions:</strong> Coins are deducted ONLY when an operation completes successfully and results are delivered to you. Zero coins are charged if an operation fails or is cancelled by the user.</li>
+                <li><strong>Feature Coin Pricing:</strong> AI Voice Parsing (5 🪙), Camera/Gallery OCR Scan (5 🪙), CSV Export (5 🪙), AI Financial Insights (5 🪙), AI Chat Assistant (5 🪙), Scheduled Bill Reminders (5 🪙), and Full Cloud Firestore Database Backup (100 🪙).</li>
+                <li><strong>AdMob Anti-Fraud Limits:</strong> Rewarded ad watches are limited to a maximum of 10 ads per day per user, with a mandatory 15-second cooldown timer between requests to prevent fraudulent click behavior.</li>
+                <li><strong>Sign-In Bonus:</strong> Users receive a one-time +100 Coins Bonus upon registering or signing in via Firebase / Google Authentication.</li>
+            </ul>
+
+            <h2>Information Collection & Use</h2>
+            <p>
+                We respect your privacy and request device permissions solely for essential local capabilities and optional cloud backup features:
+            </p>
+            <ul>
+                <li><strong>Camera:</strong> Used to capture receipts for on-device OCR text extraction.</li>
+                <li><strong>Location:</strong> Used locally to detect country and city for currency formatting and local grocery tips. This is foreground-only and never shared.</li>
+                <li><strong>Microphone & Audio:</strong> Used only when you record voice notes for AI item entry. Audio is processed temporarily and not stored by us.</li>
+                <li><strong>SMS Permissions (RECEIVE_SMS / READ_SMS):</strong> Used for automated local bank transaction SMS detection (e.g., ATM withdrawals & debit alerts). All SMS processing occurs 100% locally on your device; no SMS content is ever uploaded.</li>
+                <li><strong>Firebase Authentication & Cloud Storage:</strong> Optional Google Sign-In collects your basic user profile (Email, Display Name, UID) to authenticate and securely back up your grocery receipts and budgets to Firebase Firestore.</li>
+                <li><strong>Notifications:</strong> Used to display native local bill payment reminders and automated expense notifications on your device.</li>
+                <li><strong>Advertising Identifiers:</strong> Used by Google AdMob SDK for ad serving and frequency cap enforcement.</li>
             </ul>
 
             <h2>Third-Party Services</h2>
             <p>
-                To provide advanced assistant features and display advertisement support, the app integrates the following third-party libraries:
+                SpendSense integrates industry-standard third-party SDKs:
             </p>
             <ul>
-                <li><strong>Google AdMob:</strong> Integrated for ad banner display. Google AdMob may collect device identifiers and location data for ad delivery and measurement.</li>
-                <li><strong>Google Gemini API:</strong> Integrated to format parsed invoices and power the AI budget assistant. Google Gemini handles query data according to their service terms and safety frameworks.</li>
+                <li><strong>Firebase (Google LLC):</strong> Used for secure user authentication and cloud database backup synchronization.</li>
+                <li><strong>Google AdMob (Google LLC):</strong> Used for banner ads and rewarded video ad delivery under Google's publisher policies.</li>
+                <li><strong>Google Gemini API (Google LLC):</strong> Used to format invoice text and power AI assistant responses.</li>
             </ul>
 
             <h2>How You Can Control Your Data</h2>
             <p>
-                You can delete your local app data at any time by resetting the app from the device settings, uninstalling the app, or clearing app storage. Any saved receipt scans, budgets, lists, and AI history stored on your device remain under your control.
+                Guest users can delete all local data at any time by uninstalling the app or clearing app storage. Logged-in users can initiate full cloud backups, export CSV/JSON backups, or request account deletion from Settings.
             </p>
 
             <h2>Children's Privacy</h2>
             <p>
-                SpendSense does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children.
+                SpendSense does not knowingly collect or solicit personal data from children under 13.
             </p>
 
             <h2>Changes to This Policy</h2>
             <p>
-                We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.
+                We may update our Privacy Policy periodically. Continued use of the app constitutes acceptance of any policy updates.
             </p>
 
             <h2>Contact Us</h2>
             <p>
-                If you have any questions or suggestions regarding our Privacy Policy, please feel free to reach out via our GitHub repository issues or contact us.
+                If you have any questions regarding our Privacy Policy or Coin Economy rules, please contact us via our official support channel or GitHub repository.
             </p>
         </section>
     </main>

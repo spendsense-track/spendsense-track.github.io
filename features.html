@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSense — Complete Features Guide & AI Capabilities</title>
+    <meta name="description" content="Explore all SpendSense features: AI Receipt OCR Scanning, Voice Logging, Gemini Financial Assistant, Bank SMS Auto-Tracking, Firebase Cloud Sync, and Coin Economy.">
+    <link rel="canonical" href="https://naeemliaqatweb.github.io/grocery-app/features.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00c950;
+            --primary-dark: #00a843;
+            --primary-light: rgba(0, 201, 80, 0.1);
+            --primary-border: rgba(0, 201, 80, 0.25);
+            --accent: #208AEF;
+            --bg: #09090b;
+            --card-bg: #18181b;
+            --text: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header.nav-header {
+            height: 80px;
+            background-color: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-img { width: 38px; height: 38px; border-radius: 10px; }
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-playstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.6rem 1.25rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .hero-section {
+            padding: 4rem 1.5rem 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            max-width: 1100px;
+            margin: 0 auto 5rem;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .feature-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .green-badge { background-color: rgba(0, 201, 80, 0.12); color: var(--primary); }
+        .blue-badge { background-color: rgba(59, 130, 246, 0.12); color: #3b82f6; }
+        .purple-badge { background-color: rgba(168, 85, 247, 0.12); color: #a855f7; }
+        .amber-badge { background-color: rgba(245, 158, 11, 0.12); color: #f59e0b; }
+        .rose-badge { background-color: rgba(244, 63, 94, 0.12); color: #f43f5e; }
+
+        .feature-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img class="logo-img" src="assets/logo.png" alt="SpendSense Logo" onerror="this.src='assets/icon.png'">
+                <span class="logo-text">SpendSense</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.naeemreactnative.groceryapp" target="_blank" class="btn-playstore">
+                <i class="fa-brands fa-google-play"></i> Get on Google Play
+            </a>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <h1>Comprehensive Feature Matrix</h1>
+        <p class="subtitle">Discover how SpendSense combines AI OCR Scanning, Voice Input, Automated Bank SMS Tracking, and Cloud Sync in one powerful app.</p>
+    </div>
+
+    <div class="features-grid">
+        <!-- 1. AI OCR Receipt Scanner -->
+        <div class="feature-card">
+            <div class="feature-badge green-badge"><i class="fa-solid fa-camera"></i> Instant OCR</div>
+            <h3>Camera & Gallery Receipt OCR Scanner</h3>
+            <p>Snap any paper receipt or upload an image from your gallery. Powered by Google Gemini AI, SpendSense automatically parses store name, receipt date, individual item prices, and calculated totals in seconds.</p>
+        </div>
+
+        <!-- 2. AI Voice Assistant -->
+        <div class="feature-card">
+            <div class="feature-badge purple-badge"><i class="fa-solid fa-microphone"></i> Natural Voice</div>
+            <h3>AI Voice Entry & Voice Reminders</h3>
+            <p>Speak naturally in English or Urdu to add grocery items or set bill payment reminders. The AI assistant extracts item names, quantities, and dates hands-free.</p>
+        </div>
+
+        <!-- 3. Bank SMS Auto Tracking -->
+        <div class="feature-card">
+            <div class="feature-badge blue-badge"><i class="fa-solid fa-comment-sms"></i> Global Auto-Parsing</div>
+            <h3>Multi-Currency Bank SMS Auto-Tracking</h3>
+            <p>Automatically detects incoming bank ATM withdrawal and debit SMS alerts locally on your phone. Supports AED, PKR, USD, EUR, GBP, INR, and SAR multi-currency formatting with instant OS system notifications.</p>
+        </div>
+
+        <!-- 4. 24/7 AI Chat Assistant -->
+        <div class="feature-card">
+            <div class="feature-badge rose-badge"><i class="fa-solid fa-robot"></i> 24/7 Financial Bot</div>
+            <h3>SpendSense AI Financial Assistant</h3>
+            <p>Ask personal budgeting advice, evaluate shopping habits, and receive personalized savings strategies powered by Google Gemini 2.5 models.</p>
+        </div>
+
+        <!-- 5. Firebase Cloud Database Sync -->
+        <div class="feature-card">
+            <div class="feature-badge blue-badge"><i class="fa-solid fa-cloud-arrow-up"></i> Google Firebase</div>
+            <h3>1-Click Google Sign-In & Cloud Sync</h3>
+            <p>Guest users enjoy 100% offline local privacy. Logged-in users authenticate effortlessly via Google Sign-In to back up receipts, categories, and budgets safely to Google Firebase Firestore.</p>
+        </div>
+
+        <!-- 6. Transparent Coin Economy -->
+        <div class="feature-card">
+            <div class="feature-badge amber-badge"><i class="fa-solid fa-coins"></i> 100% Ad-Free Manual Entry</div>
+            <h3>Transparent Coin Economy & Daily Rewards</h3>
+            <p>Manual item entry is 100% ad-free and coin-free. Coins are deducted ONLY on successful AI operations (5 🪙 per scan/voice/chat). Earn free coins watching rewarded video ads (capped at max 10/day with 15s cooldown).</p>
+        </div>
+
+        <!-- 7. CSV & PDF Data Export -->
+        <div class="feature-card">
+            <div class="feature-badge green-badge"><i class="fa-solid fa-file-excel"></i> Excel & PDF</div>
+            <h3>CSV Data Export & Branded PDF Statements</h3>
+            <p>Export itemized grocery expenses directly to Excel CSV format or generate clean, branded PDF statements for record keeping and family sharing.</p>
+        </div>
+
+        <!-- 8. Local Notifications & Reminders -->
+        <div class="feature-card">
+            <div class="feature-badge purple-badge"><i class="fa-solid fa-bell"></i> Offline Scheduling</div>
+            <h3>Local Notifications & Bill Reminders</h3>
+            <p>Schedule daily 8:00 PM spending summaries and custom bill payment alerts natively on your device via Android AlarmManager without third-party push servers.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SpendSense. Designed & Developed by Naeem Liaqat. | <a href="index.html" style="color:var(--primary); text-decoration:none;">Home</a> | <a href="privacy-policy.html" style="color:var(--primary); text-decoration:none;">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
