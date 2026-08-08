@@ -297,7 +297,7 @@
             <i class="fa-solid fa-shield-halved"></i>
         </div>
         <h1>SpendSense Privacy Policy</h1>
-        <p class="subtitle">Effective Date: August 6, 2026. Your privacy is under your absolute control.</p>
+        <p class="subtitle">Effective Date: August 8, 2026 (v1.1.6). Your privacy is under your absolute control.</p>
     </header>
 
     <main>
@@ -363,6 +363,17 @@
                 </p>
             </div>
 
+            <!-- Group Expense Splitter & Contacts Privacy -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper blue-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="pillar-title">Group Splitter & Local Contacts</h3>
+                <p class="pillar-text">
+                    Track shared bills (trips, dining, flatmates, office lunches) with Equal, Custom, Percentage, and Shares calculations. Phonebook contacts are accessed 100% locally on-device. No contact data is ever uploaded, shared, or sold.
+                </p>
+            </div>
+
             <!-- Firebase Authentication & Hybrid Sync -->
             <div class="pillar-card">
                 <div class="pillar-icon-wrapper blue-icon">
@@ -396,6 +407,7 @@
                 <li><strong>Camera:</strong> Used to capture receipts for on-device OCR text extraction.</li>
                 <li><strong>Location:</strong> Used locally to detect country and city for currency formatting and local grocery tips. This is foreground-only and never shared.</li>
                 <li><strong>Microphone & Audio:</strong> Used only when you record voice notes for AI item entry. Audio is processed temporarily and not stored by us.</li>
+                <li><strong>Device Contacts (`android.permission.READ_CONTACTS`):</strong> Optional permission used exclusively when you choose to import member names into the Group Splitter bill feature. Selected contact names are read 100% locally on your device. We NEVER upload, sync, sell, or transmit your contact book to any server. You can also manually type any member name without granting contacts access.</li>
                 <li><strong>SMS Permissions (RECEIVE_SMS / READ_SMS):</strong> Used for automated local bank transaction SMS detection (e.g., ATM withdrawals & debit alerts). All SMS processing occurs 100% locally on your device; no SMS content is ever uploaded.</li>
                 <li><strong>Firebase Authentication & Cloud Storage:</strong> Optional Google Sign-In collects your basic user profile (Email, Display Name, UID) to authenticate and securely back up your grocery receipts and budgets to Firebase Firestore.</li>
                 <li><strong>Notifications:</strong> Used to display native local bill payment reminders and automated expense notifications on your device.</li>
